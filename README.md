@@ -1,27 +1,44 @@
-# MyAngularApp
+`````````````````````STEPS``````````````````````````````````````````
+1. Initialization
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.2.
+<!-- npm install -g @angular/cli@latest -->
+=> angular ki command line interface yaha install ho jayegi
+=> har baar karna hota hai? Yes!
+<!-- ng new my-angular-app -->
+=>  ye app create karta hai
+=> different options hote hai regarding CSS/SCSS/etc
+<!-- cd my-angular-app -->
+=> uss directory m aane ke liye, mltb directly uss folder m aane ke liye hum cd karte hai!
+<!-- ng serve -->
+=> localhost:4200 pe host kar deta hai
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+2. Folder structure and all the important files mainly required:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+<!-- - app.component.ts : -->
+ This is the main component of your application. It contains metadata related to the component like selector.
+<!-- - app.component.html :  -->
+This is the main component of your application  which contains HTML code for your application. It's like the index.html file in other frameworks   - index.html
+<!-- - app.component.spec.ts :  -->
+This file tests the functionality of the AppComponent. You can write test cases in this file using Jasmine framework. YET TO LEARN
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+3. Creating Hello World:
+<!-- ng generate component hello-world -->
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+// src/app/hello-world/hello-world.component.ts
 
-## Running end-to-end tests
+import { Component } from '@angular/core';
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+@Component({
+  selector: 'app-hello-world',
+  template: '<h1>Hello, World!</h1>',
+})
+export class HelloWorldComponent {}
 
-## Further help
+<!-- src/app/app.component.html -->
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+<h1>Welcome to {{ title }}!</h1>
+<app-hello-world></app-hello-world>
