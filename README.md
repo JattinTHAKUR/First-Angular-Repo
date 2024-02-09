@@ -42,3 +42,42 @@ export class HelloWorldComponent {}
 
 <h1>Welcome to {{ title }}!</h1>
 <app-hello-world></app-hello-world>
+
+
+
+`````````````````````````````````````````````````````````````````````````````````````````````
+<body>
+
+    <!-- Parent div with ID "main-eventlist" -->
+    <div id="main-eventlist">
+
+        <!-- Child div 1 -->
+        <div class="child-div">
+            <div class="header">
+                <h1>Event List</h1>
+                <div class="sort-container">
+                    <span class="sort-text">SORT BY</span>
+                    <span class="colon">:</span>
+                    <select class="dropdown" id="sortDropdown">
+                        <option value="latest">Latest</option>
+                        <option value="oldest">Oldest</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Table with headings -->
+            <table>
+                <thead>
+                    <th>DATE</th>
+                    <th>FROM</th>
+                    <th>TO</th>
+                    <th>VOYAGE STAGE</th>
+                    <th>VOYAGE LEG</th>
+                    <th>EVENT</th>
+                    <th>POSITION</th>
+                </thead>
+                <tbody>
+                    <!-- Add table rows with data as needed -->
+                </tbody>
+            </table>
+        </div>
